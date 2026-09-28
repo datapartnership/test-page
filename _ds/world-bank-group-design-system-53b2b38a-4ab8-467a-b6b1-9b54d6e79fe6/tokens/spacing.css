@@ -1,0 +1,28 @@
+:root{
+--space-4:4px;--space-8:8px;--space-12:12px;--space-16:16px;--space-24:24px;--space-32:32px;--space-64:64px;
+--gutter:15px;
+--container-sm:550px;--container-md:750px;--container-lg:970px;--container-xl:1170px;--banner-max:1440px;
+--bp-sm:576px;--bp-md:768px;--bp-lg:992px;--bp-xl:1200px;
+--control-height:45px;--nav-min-height:60px;
+/* shape: Loop is square — radius 0 everywhere, 100% only for avatars/radios */
+--radius-none:0;--radius-round:100%;
+/* elevation */
+--shadow-card:0px 2px 2px 1px #e5e5e5;
+--shadow-dropdown:0 6px 12px rgba(0,0,0,.175);
+--shadow-megamenu:0 4px 4px rgba(0,0,0,.4);
+--shadow-input:inset 0 1px 1px rgba(0,0,0,.075);
+--shadow-input-focus:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+--shadow-primary-inset:inset 0px 3px 0px 0px #f0f7fe;
+--shadow-primary-input:inset 0px 2px 1px 0px #f0f7fe;
+--shadow-secondary-input:inset 0px 1px 2px 0px #d4d4d4;
+--shadow-row:0px -1px 1px 0px #e5e5e5;
+/* overlays */
+--overlay-banner:rgba(0,0,0,.7);--overlay-ghost-hover:rgba(255,255,255,.2);--overlay-ghost-inverse:rgba(0,0,0,.1);--overlay-ghost-inverse-hover:rgba(0,0,0,.4);--overlay-cta-gradient:rgba(51,51,51,.8);
+--gradient-card-overlay:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.2) 20%,#000 100%); /* @kind color */
+--gradient-img:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(0,0,0,.7) 100%); /* @kind color */
+/* motion */
+--ease-std:ease; /* @kind other */
+--dur-fast:.15s; /* @kind other */
+--dur-std:.3s; /* @kind other */
+--dur-slow:.5s; /* @kind other */
+}

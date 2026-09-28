@@ -1,0 +1,5 @@
+html{font-family:var(--font-body);-webkit-text-size-adjust:100%}
+body{font-family:var(--font-body);font-size:1rem;line-height:1.5rem;color:var(--text-body);background:var(--surface-page);margin:0}
+*,*:before,*:after{box-sizing:border-box}
+a{color:var(--link);text-decoration:none}
+a:hover,a:focus{color:var(--link-hover)}

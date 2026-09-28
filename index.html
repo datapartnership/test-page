@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;display=swap">
+<style>
+@font-face{font-family:'Andes';src:url('fonts/304244_1_0.woff2') format('woff2');font-weight:400}
+@font-face{font-family:'Andes';src:url('fonts/304244_0_0.woff2') format('woff2');font-weight:700}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:#333;font-family:'Open Sans',sans-serif;font-size:18px;line-height:29px}
+a{color:#0071bc;text-decoration:none}
+a:hover{color:#004c92;text-decoration:underline}
+input,select,textarea,button{font-family:'Open Sans',sans-serif}
+</style>
+</helmet>
+
+<nav style="background:#fff;border-bottom:1px solid #e5e5e5;min-height:60px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;padding:0 15px">
+  <a href="#top" style="display:flex;align-items:baseline;gap:12px;padding:16px;text-decoration:none">
+    <span style="font-family:Andes,sans-serif;font-weight:700;font-size:20px;line-height:28px;color:#002245;white-space:nowrap">World Bank Group</span>
+    <span style="font-family:Andes,sans-serif;font-size:16px;line-height:28px;color:#787878;padding-left:12px;border-left:1px solid #e5e5e5;white-space:nowrap">Development Data Group</span>
+  </a>
+  <div style="display:flex;flex-wrap:wrap;align-items:center;padding:8px 0">
+    <a href="#paths" style="font-family:Andes,sans-serif;font-weight:700;font-size:13px;line-height:16px;text-transform:uppercase;color:#0071bc;margin:0 12px;padding:8px 0 5px;white-space:nowrap;border-bottom:3px solid transparent;text-decoration:none" style-hover="color:#002245;border-bottom:3px solid #002245">Get Data</a>
+    <a href="#paths" style="font-family:Andes,sans-serif;font-weight:700;font-size:13px;line-height:16px;text-transform:uppercase;color:#0071bc;margin:0 12px;padding:8px 0 5px;white-space:nowrap;border-bottom:3px solid transparent;text-decoration:none" style-hover="color:#002245;border-bottom:3px solid #002245">Data Analytics</a>
+    <a href="#mandates" style="font-family:Andes,sans-serif;font-weight:700;font-size:13px;line-height:16px;text-transform:uppercase;color:#0071bc;margin:0 12px;padding:8px 0 5px;white-space:nowrap;border-bottom:3px solid transparent;text-decoration:none" style-hover="color:#002245;border-bottom:3px solid #002245">Our Mandates</a>
+    <a href="#contact" style="font-family:Andes,sans-serif;font-weight:700;font-size:13px;line-height:16px;text-transform:uppercase;color:#0071bc;margin:0 12px;padding:8px 0 5px;white-space:nowrap;border-bottom:3px solid transparent;text-decoration:none" style-hover="color:#002245;border-bottom:3px solid #002245">Contact</a>
+  </div>
+</nav>
+
+<sc-if value="{{ photoBanner }}" hint-placeholder-val="{{ true }}">
+  <header id="top" style="position:relative;max-width:1440px;margin:0 auto;height:480px;overflow:hidden;background:#002245">
+    <img src="uploads/1746484420457.jpeg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+    <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0) 20%,rgba(0,0,0,0.7) 100%)"></div>
+    <div style="position:relative;height:100%;max-width:1170px;margin:0 auto;padding:0 15px 56px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff">
+      <div style="font-family: 'Open Sans',sans-serif; font-size: 18px; line-height: 16px; font-weight: 600; letter-spacing: .78px; text-transform: uppercase; margin-bottom: 16px">Development Data Group</div>
+      <h1 style="margin:0;font-family:Andes,sans-serif;font-weight:400;font-size:clamp(40px,6vw,64px);line-height:1.1;text-wrap:balance">Data drives development</h1>
+    </div>
+  </header>
+</sc-if>
+<sc-if value="{{ solidBanner }}" hint-placeholder-val="{{ false }}">
+  <header id="top" style="background:#009fda;color:#fff">
+    <div style="max-width:1170px;margin:0 auto;padding:96px 15px 72px">
+      <div style="font-family:'Open Sans',sans-serif;font-size:12px;line-height:16px;font-weight:600;letter-spacing:.78px;text-transform:uppercase;margin-bottom:16px">Development Data Group</div>
+      <h1 style="margin:0;font-family:Andes,sans-serif;font-weight:400;font-size:clamp(40px,6vw,64px);line-height:1.1">Data drives development</h1>
+    </div>
+  </header>
+</sc-if>
+
+<section style="max-width:1170px;margin:0 auto;padding:48px 15px 16px">
+  <div style="display:flex;flex-wrap:wrap;font-size:12px;line-height:16px;color:#787878;text-transform:uppercase;letter-spacing:.5px;margin-bottom:16px">
+    <span style="padding-right:8px;margin-right:8px;border-right:1px solid #e5e5e5">About</span><span>Led by the WBG Chief Statistician</span>
+  </div>
+  <p style="margin:0;max-width:880px;font-family:'Open Sans',sans-serif;font-size:20px;line-height:32px;color:#545454;text-wrap:pretty">The Development Data Group, led by the <a href="https://www.worldbank.org/en/about/people/h/haishan-fu">World Bank Group Chief Statistician</a>, supports the WBG mission through production of global public goods, data and analytical operations support, and development data governance.</p>
+</section>
+
+<section id="paths" style="max-width:1170px;margin:0 auto;padding:48px 15px 64px">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:30px">
+    <article style="background:#fff;border-top:1px solid #058a8f;box-shadow:0 2px 2px 1px #e5e5e5;padding:32px;display:flex;flex-direction:column">
+      <div style="font-size:12px;line-height:16px;font-weight:600;letter-spacing:.78px;text-transform:uppercase;color:#787878;margin-bottom:8px">I need</div>
+      <h2 style="margin:0 0 24px;font-family:Andes,sans-serif;font-weight:400;font-size:44px;line-height:52px;color:#002245">Data</h2>
+      <div style="padding:16px 0;border-top:1px solid #e5e5e5">
+        <h3 style="margin:0 0 4px;font-family:Andes,sans-serif;font-weight:400;font-size:24px;line-height:32px;color:#333"><a href="#" style="color:#0071bc">Data360</a></h3>
+        <p style="margin:0;font-size:16px;line-height:26px;color:#545454">The one-stop catalog for development data. Search indicators, datasets and <a href="https://microdata.worldbank.org/index.php/home" target="_blank" rel="noopener">microdata</a> from across the World Bank Group.</p>
+      </div>
+
+      <div style="padding:16px 0 24px;border-top:1px solid #e5e5e5;flex:1">
+        <p style="margin:0 0 12px;font-size:16px;line-height:26px;color:#545454">Can't find the data you need in the catalog? DECDG can support new data acquisition and collection:&nbsp;</p>
+        <ul style="margin:0;padding:0;list-style:none">
+          <li style="padding:8px 0;border-bottom:1px solid #e5e5e5"><div style="font-size:16px;line-height:26px;font-weight:600">Surveys</div><div style="font-size:14px;line-height:22px;color:#787878">Custom-designed surveys run by our field teams.</div></li>
+          <li style="padding:8px 0;border-bottom:1px solid #e5e5e5"><div style="font-size:16px;line-height:26px;font-weight:600">Field data collection</div><div style="font-size:14px;line-height:22px;color:#787878">Data captured directly on the ground where it's needed.</div></li>
+          <li style="padding:8px 0;border-bottom:1px solid #e5e5e5"><div style="font-size:16px;line-height:26px;font-weight:600">Data purchase</div><div style="font-size:14px;line-height:22px;color:#787878">Licensed datasets sourced from commercial providers.</div></li>
+          <li style="padding:8px 0;border-bottom:1px solid #e5e5e5"><div style="font-size:16px;line-height:26px;font-weight:600">Company and third-party pro bono data</div><div style="font-size:14px;line-height:22px;color:#787878">Data shared by private firms and international organziations at no cost.</div></li>
+        </ul>
+      </div>
+      <div style="margin:24px -32px -32px;padding:24px 32px;background:#f6f6f6;border-top:1px solid #e5e5e5;display:flex;flex-direction:column;gap:16px">
+        <span style="font-size:16px;line-height:24px;font-weight:600;color:#333">Fill in the form. Get data.</span>
+        <button type="button" onClick="{{ openData }}" style="align-self:flex-start;border:1px solid transparent;border-radius:0;background:#0071bc;color:#fff;font-size:12px;line-height:16px;font-weight:600;letter-spacing:.78px;text-transform:uppercase;padding:16px 32px;min-width:140px;cursor:pointer" style-hover="background:#004c92">Get Data</button>
+      </div>
+    </article>
+
+    <article style="background:#fff;border-top:1px solid #058a8f;box-shadow:0 2px 2px 1px #e5e5e5;padding:32px;display:flex;flex-direction:column">
+      <div style="font-size:12px;line-height:16px;font-weight:600;letter-spacing:.78px;text-transform:uppercase;color:#787878;margin-bottom:8px">I need</div>
+      <h2 style="margin:0 0 24px;font-family:Andes,sans-serif;font-weight:400;font-size:44px;line-height:52px;color:#002245">Data analytics</h2>
+      <div style="padding:16px 0;border-top:1px solid #e5e5e5">
+        <h3 style="margin:0 0 4px;font-family:Andes,sans-serif;font-weight:400;font-size:24px;line-height:32px;color:#333"><a href="https://datapartnership.org/projects/" target="_blank" rel="noopener" style="color:#0071bc">Data Project Catalog</a></h3>
+        <p style="margin:0;font-size:16px;line-height:26px;color:#545454">Browse examples of data science and analytics projects delivered across the World Bank Group.</p>
+      </div>
+      <div style="padding:16px 0 24px;border-top:1px solid #e5e5e5;flex:1">
+        <p style="margin:0 0 16px;font-size:16px;line-height:26px;color:#545454">We apply the latest data science, AI and geospatial methods to create insights and interactive tools for your project and counterparts.</p>
+        <ul style="margin:0;padding:0;list-style:none">
+          <li style="padding:8px 0;border-bottom:1px solid #e5e5e5"><div style="font-size:16px;line-height:26px;font-weight:600">Reusable</div><div style="font-size:14px;line-height:22px;color:#787878">Tools built once and adapted across projects and countries.</div></li>
+          <li style="padding:8px 0;border-bottom:1px solid #e5e5e5"><div style="font-size:16px;line-height:26px;font-weight:600">Translatable</div><div style="font-size:14px;line-height:22px;color:#787878">Delivered in the languages your counterparts work in.</div></li>
+          <li style="padding:8px 0;border-bottom:1px solid #e5e5e5"><div style="font-size:16px;line-height:26px;font-weight:600">Training-ready</div><div style="font-size:14px;line-height:22px;color:#787878">Packaged with materials so teams can use them independently.</div></li>
+        </ul>
+      </div>
+      <div style="margin:24px -32px -32px;padding:24px 32px;background:#f6f6f6;border-top:1px solid #e5e5e5;display:flex;flex-direction:column;gap:16px">
+        <span style="font-size:16px;line-height:24px;font-weight:600;color:#333">Fill in the form. Get analytics support.</span>
+        <button type="button" onClick="{{ openAnalytics }}" style="align-self:flex-start;border:1px solid transparent;border-radius:0;background:#002245;color:#fff;font-size:12px;line-height:16px;font-weight:600;letter-spacing:.78px;text-transform:uppercase;padding:16px 32px;min-width:140px;cursor:pointer" style-hover="background:#013367">Get Data Science Support</button>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="mandates" style="background:#f6f6f6">
+  <div style="max-width:1170px;margin:0 auto;padding:64px 15px">
+    <h2 style="margin:0 0 32px;font-family:Andes,sans-serif;font-weight:400;font-size:36px;line-height:44px;color:#333">Our mandates</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:30px">
+      <sc-for list="{{ mandates }}" as="m" hint-placeholder-count="3">
+        <div style="background:#fff;border-top:1px solid #058a8f;box-shadow:0 2px 2px 1px #e5e5e5;padding:24px">
+          <h3 style="margin:0 0 16px;font-family:Andes,sans-serif;font-size:20px;line-height:24px;font-weight:700;color:#002245">{{ m.title }}</h3>
+          <ul style="margin:0;padding:0;list-style:none">
+            <sc-for list="{{ m.items }}" as="it" hint-placeholder-count="5">
+              <sc-if value="{{ it.isGroup }}" hint-placeholder-val="{{ false }}">
+                <li style="padding:12px 0;border-top:1px solid #e5e5e5">
+                  <span style="font-size:16px;line-height:24px;color:#0071bc">{{ it.name }}</span>
+                  <div style="font-size:13px;line-height:20px;color:#787878">{{ it.intro }}
+                    <sc-for list="{{ it.parts }}" as="p" hint-placeholder-count="3">
+                      <a href="{{ p.href }}" style="color:#0071bc;text-decoration:underline">{{ p.label }}</a>{{ p.sep }}
+                    </sc-for>
+                  </div>
+                </li>
+              </sc-if>
+              <sc-if value="{{ it.isEntry }}" hint-placeholder-val="{{ true }}">
+                <li style="padding:12px 0;border-top:1px solid #e5e5e5">
+                  <a href="{{ it.href }}" target="{{ it.target }}" rel="{{ it.rel }}" style="font-size:16px;line-height:24px;color:#0071bc">{{ it.name }}</a>
+                  <sc-if value="{{ it.showDesc }}" hint-placeholder-val="{{ true }}">
+                    <div style="font-size:13px;line-height:20px;color:#787878">{{ it.desc }}</div>
+                  </sc-if>
+                </li>
+              </sc-if>
+            </sc-for>
+          </ul>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<footer id="contact" style="background:#002245;color:#fff">
+  <div style="max-width:1170px;margin:0 auto;padding:48px 15px 32px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:32px">
+    <div style="max-width:420px">
+      <div style="font-family:Andes,sans-serif;font-weight:700;font-size:20px;line-height:28px;margin-bottom:8px">World Bank Group</div>
+      <p style="margin:0;font-size:14px;line-height:22px;color:#fff">Development Data Group<br>1818 H Street NW, Washington, DC 20433, USA</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:24px 48px">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="font-size:12px;line-height:16px;font-weight:600;letter-spacing:.78px;text-transform:uppercase">Services</div>
+        <a href="#paths" style="font-size:14px;line-height:22px;color:#fff">Request data</a>
+        <a href="#paths" style="font-size:14px;line-height:22px;color:#fff">Request analytics support</a>
+        <a href="#" style="font-size:14px;line-height:22px;color:#fff">Data360</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="font-size:12px;line-height:16px;font-weight:600;letter-spacing:.78px;text-transform:uppercase">About</div>
+        <a href="#mandates" style="font-size:14px;line-height:22px;color:#fff">Our mandates</a>
+        <a href="#" style="font-size:14px;line-height:22px;color:#fff">Data Academy</a>
+        <a href="#" style="font-size:14px;line-height:22px;color:#fff">Contact us</a>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1170px;margin:0 auto;padding:16px 15px 24px;border-top:1px solid rgba(255,255,255,0.2);font-size:12px;line-height:16px;color:#fff">© 2026 The World Bank Group, All Rights Reserved.</div>
+</footer>
+
+<sc-if value="{{ formOpen }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;inset:0;z-index:100;display:flex;justify-content:flex-end">
+    <div onClick="{{ close }}" style="position:absolute;inset:0;background:rgba(0,0,0,0.5)"></div>
+    <aside style="position:relative;width:min(560px,100%);height:100%;overflow-y:auto;background:#fff;box-shadow:0 6px 12px rgba(0,0,0,.175)">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:32px 32px 24px;border-bottom:1px solid #e5e5e5">
+        <div>
+          <div style="font-size:12px;line-height:16px;font-weight:600;letter-spacing:.78px;text-transform:uppercase;color:#787878;margin-bottom:8px">Request form</div>
+          <h2 style="margin:0;font-family:Andes,sans-serif;font-weight:400;font-size:32px;line-height:40px;color:#002245">{{ formTitle }}</h2>
+        </div>
+        <button type="button" onClick="{{ close }}" aria-label="Close" style="border:1px solid #e5e5e5;background:#fff;width:40px;height:40px;cursor:pointer;font-size:20px;line-height:1;color:#333">×</button>
+      </div>
+
+      <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+        <div style="padding:32px">
+          <div style="background:#e8f5ee;border:1px solid #4cbb88;padding:24px;margin-bottom:24px">
+            <div style="font-family:Andes,sans-serif;font-size:22px;line-height:30px;color:#333;margin-bottom:8px">Request received</div>
+            <p style="margin:0;font-size:16px;line-height:26px;color:#333">Thank you, {{ name }}. A member of the Development Data Group will follow up at {{ email }} within five working days.</p>
+          </div>
+          <button type="button" onClick="{{ close }}" style="border:1px solid transparent;border-radius:0;background:#0071bc;color:#fff;font-size:12px;font-weight:600;letter-spacing:.78px;text-transform:uppercase;padding:16px 32px;cursor:pointer" style-hover="background:#004c92">Close</button>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ editing }}" hint-placeholder-val="{{ true }}">
+        <div style="padding:24px 32px 32px;display:flex;flex-direction:column;gap:24px">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px">
+            <label style="display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:20px;font-weight:600">Full name *
+              <input value="{{ name }}" onChange="{{ onName }}" style="height:45px;border:1px solid {{ nameBorder }};border-radius:0;padding:0 12px;font-size:16px;box-shadow:inset 0 2px 3px rgba(0,113,188,0.12);outline:none" style-focus="border:2px solid #0071bc">
+            </label>
+            <label style="display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:20px;font-weight:600">Email *
+              <input type="email" value="{{ email }}" onChange="{{ onEmail }}" style="height:45px;border:1px solid {{ emailBorder }};border-radius:0;padding:0 12px;font-size:16px;box-shadow:inset 0 2px 3px rgba(0,113,188,0.12);outline:none" style-focus="border:2px solid #0071bc">
+            </label>
+          </div>
+          <label style="display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:20px;font-weight:600">Unit and project (P-code)
+            <input value="{{ project }}" onChange="{{ onProject }}" placeholder="e.g. DECDG · P123456" style="height:45px;border:1px solid #ccc;border-radius:0;padding:0 12px;font-size:16px;box-shadow:inset 0 2px 3px rgba(0,113,188,0.12);outline:none" style-focus="border:2px solid #0071bc">
+          </label>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="font-size:14px;line-height:20px;font-weight:600">{{ optionsLabel }}</div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <sc-for list="{{ options }}" as="o" hint-placeholder-count="4">
+                <button type="button" onClick="{{ o.toggle }}" style="border:1px solid {{ o.border }};border-radius:0;background:{{ o.bg }};color:{{ o.fg }};font-size:14px;line-height:20px;padding:10px 16px;white-space:nowrap;cursor:pointer">{{ o.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+          <label style="display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:20px;font-weight:600">Countries or regions
+            <input value="{{ geo }}" onChange="{{ onGeo }}" placeholder="e.g. Kenya, Sahel region" style="height:45px;border:1px solid #ccc;border-radius:0;padding:0 12px;font-size:16px;box-shadow:inset 0 2px 3px rgba(0,113,188,0.12);outline:none" style-focus="border:2px solid #0071bc">
+          </label>
+          <label style="display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:20px;font-weight:600">{{ detailLabel }}
+            <textarea value="{{ detail }}" onChange="{{ onDetail }}" rows="5" style="border:1px solid #ccc;border-radius:0;padding:12px;font-size:16px;line-height:24px;box-shadow:inset 0 2px 3px rgba(0,113,188,0.12);outline:none;resize:vertical" style-focus="border:2px solid #0071bc"></textarea>
+          </label>
+          <sc-if value="{{ showError }}" hint-placeholder-val="{{ false }}">
+            <div style="font-size:14px;line-height:20px;color:#b52b11">Please provide your name and a valid email address.</div>
+          </sc-if>
+          <div style="display:flex;gap:16px;flex-wrap:wrap;padding-top:8px;border-top:1px solid #e5e5e5">
+            <button type="button" onClick="{{ submit }}" style="border:1px solid transparent;border-radius:0;background:#0071bc;color:#fff;font-size:12px;font-weight:600;letter-spacing:.78px;text-transform:uppercase;padding:16px 32px;min-width:140px;cursor:pointer;margin-top:16px" style-hover="background:#004c92">Submit Request</button>
+            <button type="button" onClick="{{ close }}" style="border:1px solid transparent;border-radius:0;background:#787878;color:#fff;font-size:12px;font-weight:600;letter-spacing:.78px;text-transform:uppercase;padding:16px 32px;min-width:140px;cursor:pointer;margin-top:16px" style-hover="background:#333">Cancel</button>
+          </div>
+        </div>
+      </sc-if>
+    </aside>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;banner&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;photo&quot;,&quot;solid&quot;],&quot;default&quot;:&quot;photo&quot;,&quot;tsType&quot;:&quot;'photo'|'solid'&quot;},&quot;showDescriptions&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+const MANDATES = [
+  { title: 'Global Public Goods', items: [
+    { group: 'WBG Foundational Datasets', intro: 'Core global public data goods that inform all WBG operations:', parts: [
+        ['International Debt Statistics', '#'],
+        ['World Bank Group Country Income Classifications', '#'],
+        ['World Development Indicators', '#']] },
+    ['Data360', 'One-stop catalog for development data, including microdata. '],
+    ['Atlas of Global Development', 'Data and stories tracking progress on the Sustainable Development Goals'],
+    ['Living Standards Measurement Study', 'Household survey program measuring welfare and living conditions in developing countries'],
+    ['International Comparison Program', 'Collects prices worldwide to produce purchasing power parities comparing economic size and living standards across countries'],
+    ['Poverty and Inequality Platform', 'Source of global poverty and inequality estimates'],
+    ['50x30', 'Initiative to close gender data gaps in 50 countries by 2030'],
+    { group: 'Special Topics Datasets', intro: 'Data covering gender, food security, statistical capacity, and trade:', parts: [
+        ['Gender Data Portal', '#'],
+        ['Food Prices for Nutrition', '#'],
+        ['Statistical Performance Indicators', '#'],
+        ['World Integrated Trade Solution', 'https://wits.worldbank.org']] }] },
+  { title: 'Operations Support', items: [
+    ['Data Science and Analytics', 'Data science, AI and geospatial support for projects'],
+    ['Data Collection', 'Surveys and field data collection'],
+    ['Data Partnerships', 'Access to pro-bono third party datasets'],
+    ['Data Academy', 'Training for staff and client counterparts'],
+    ['Data Talent Board', 'Matching data skills to operational needs']] },
+  { title: 'Data Governance and Quality', items: [
+    ['Data Quality and Standards', 'Standards and review of WBG data'],
+    ['Metadata', 'Documentation and discoverability'],
+    ['Global Data Facility', 'Corporate data framework'],
+    ['AI for Data and Data for AI', 'Improving data quality and discoverability with AI']] },
+];
+const OPTS = {
+  data: ['Existing data (Data360)', 'Survey', 'Field data collection', 'Data purchase', 'Pro bono / third-party data'],
+  analytics: ['Data science', 'AI / machine learning', 'Geospatial', 'Interactive tool', 'Training'],
+};
+const blank = { name: '', email: '', project: '', geo: '', detail: '', picked: [], submitted: false, tried: false };
+
+class Component extends DCLogic {
+  state = { form: null, ...blank };
+  open = (form) => this.setState({ form, ...blank });
+  field = (k) => (e) => this.setState({ [k]: e.target.value });
+  renderVals() {
+    const s = this.state;
+    const showDesc = this.props.showDescriptions ?? true;
+    const photo = (this.props.banner ?? 'photo') === 'photo';
+    const emailOk = /\S+@\S+\.\S+/.test(s.email);
+    const bad = s.tried && (!s.name.trim() || !emailOk);
+    const isData = s.form === 'data';
+    return {
+      photoBanner: photo, solidBanner: !photo,
+      mandates: MANDATES.map(m => ({ title: m.title, items: m.items.map(it => it.group ? { isGroup: true, isEntry: false, name: it.group, intro: it.intro, parts: it.parts.map(([label, href], i) => ({ label, href, sep: i < it.parts.length - 1 ? ', ' : '' })) } : { isGroup: false, isEntry: true, name: it[0], desc: it[1], showDesc, href: it[2] || '#', target: it[2] ? '_blank' : undefined, rel: it[2] ? 'noopener' : undefined }) })),
+      openData: () => this.open('data'),
+      openAnalytics: () => this.open('analytics'),
+      close: () => this.setState({ form: null }),
+      formOpen: !!s.form,
+      formTitle: isData ? 'Request data' : 'Request data science support',
+      optionsLabel: isData ? 'What kind of data do you need?' : 'What support do you need?',
+      detailLabel: isData ? 'Describe the data you need' : 'Describe your project and counterparts',
+      submitted: s.submitted, editing: !s.submitted,
+      name: s.name, email: s.email, project: s.project, geo: s.geo, detail: s.detail,
+      onName: this.field('name'), onEmail: this.field('email'), onProject: this.field('project'), onGeo: this.field('geo'), onDetail: this.field('detail'),
+      nameBorder: s.tried && !s.name.trim() ? '#b52b11' : '#ccc',
+      emailBorder: s.tried && !emailOk ? '#b52b11' : '#ccc',
+      showError: bad,
+      options: (OPTS[s.form] || []).map(label => {
+        const on = s.picked.includes(label);
+        return { label, bg: on ? '#0071bc' : '#fff', fg: on ? '#fff' : '#0071bc', border: on ? '#0071bc' : '#ccc',
+          toggle: () => this.setState(st => ({ picked: on ? st.picked.filter(x => x !== label) : [...st.picked, label] })) };
+      }),
+      submit: () => {
+        if (!s.name.trim() || !emailOk) return this.setState({ tried: true });
+        this.setState({ submitted: true });
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>
